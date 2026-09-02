@@ -74,3 +74,13 @@ footer{
 .card ul{
     padding: 1rem;
 }
+
+.card p a{
+    color: darkblue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card p a:hover{
+    text-decoration: underline;
+}
