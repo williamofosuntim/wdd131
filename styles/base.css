@@ -5,9 +5,9 @@ body{
 }
 
 header{
-    background-color:darkblue;
-    color:white;
-    text-align:center;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
 }
 
 #course-title{
@@ -18,7 +18,7 @@ header{
 }
 
 nav{
-    background-color: black;
+    background-color: darkblue;
     display: flex;
     justify-content: space-around;
 }
@@ -30,17 +30,21 @@ nav a{
 }
 
 nav a:hover{
-    background-color: darkblue;
+    background-color: black;
 }
 
 main{
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
     padding: 1rem;
     max-width: 1000px;
+    margin: 0 auto;
+}
+
+main h1{
+    grid-column: 1 / -1;
     text-align: center;
-    margin: 0;
 }
 
 .card{
@@ -57,6 +61,11 @@ main{
     margin: 0;
 }
 
+.card p{
+    text-align: left;
+    padding: 0 1rem;
+}
+
 footer{
     background-color: darkblue;
     color: white;
@@ -69,10 +78,6 @@ footer{
     height: auto;
     float: right;
     margin: 0 0 1rem 1rem;
-}
-
-.card ul{
-    padding: 1rem;
 }
 
 .card p a{
