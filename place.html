@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghana - WDD131 - Country Page</title>
+    <meta name="description" content="Facts about Ghana, including geography, population, currency, and current weather conditions.">
+    <meta name="author" content="William Ofosu Ntim">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Ghana</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <img
+                    srcset="images/ghana-hero-small.webp 500w,
+                            images/ghana-hero-large.webp 1200w"
+                    sizes="(max-width: 799px) 100vw, 1200px"
+                    src="images/ghana-hero-large.webp"
+                    alt="Cape Coast Castle in Ghana"
+                    width="500" height="750">
+            </picture>
+        </div>
+
+        <section class="data">
+            <h2>Data</h2>
+            <div class="info-grid">
+                <span class="label">Area:</span><span class="value">238,533 sq km</span>
+                <span class="label">Population:</span><span class="value">34,100,000</span>
+                <span class="label">Capital:</span><span class="value">Accra</span>
+                <span class="label">Languages:</span><span class="value">English, Twi, Fante</span>
+                <span class="label">Currency:</span><span class="value">Ghanaian Cedi</span>
+                <span class="label">Time Zone:</span><span class="value">UTC+0</span>
+                <span class="label">Calling Code:</span><span class="value">+233</span>
+                <span class="label">Internet TLD:</span><span class="value">.gh</span>
+            </div>
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+            <img src="images/weather-icon.svg" alt="Partly Cloudy" class="weather-icon-mobile" width="80" height="80">
+            <div class="info-grid">
+                <span class="label">Temperature:</span><span class="value">10 °C</span>
+                <span class="label">Conditions:</span><span class="value">Partly Cloudy</span>
+                <span class="label">Wind:</span><span class="value">12 km/h</span>
+                <span class="label">Wind Chill:</span><span class="value" id="windChill"></span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | William | Ghana</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
