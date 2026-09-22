@@ -1,0 +1,162 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Libre Baskerville", Georgia, serif;
+    color: #222222;
+    background-color: #f5f2ea;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    background-color: #1b2a38;
+    color: #ffffff;
+    padding: 1rem;
+}
+
+.site-title {
+    font-family: "Fjalla One", sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.03em;
+}
+
+#menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    font-size: 1.25rem;
+    padding: 0.25rem 0.6rem;
+    cursor: pointer;
+}
+
+header {
+    position: relative;
+}
+
+/* Nav is hidden on small screens until the hamburger opens it */
+nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #16212c;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a {
+    display: block;
+    color: #d9d2bf;
+    text-decoration: none;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+nav a:last-child {
+    border-bottom: none;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #a9812c;
+    color: #1b2a38;
+}
+
+nav a[aria-current="page"] {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #2c4258;
+}
+
+/* ---------- Main content ---------- */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 3rem;
+}
+
+main h1 {
+    font-family: "Fjalla One", sans-serif;
+    font-size: 1.6rem;
+    color: #1b2a38;
+    margin-bottom: 0.5rem;
+}
+
+#result-count {
+    font-size: 0.9rem;
+    color: #6b6355;
+    margin-bottom: 1.25rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.container figure {
+    background-color: #ffffff;
+    border: 1px solid #ddd4c0;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.container figcaption {
+    padding: 0.9rem 1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.container figcaption strong {
+    font-family: "Fjalla One", sans-serif;
+    font-size: 1.1rem;
+    color: #1b2a38;
+}
+
+.container figcaption span {
+    font-size: 0.88rem;
+    color: #4d4a42;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    background-color: #1b2a38;
+    color: #d9d2bf;
+    text-align: center;
+    padding: 1.25rem 1rem;
+    font-size: 0.85rem;
+}
+
+footer p {
+    margin: 0.2rem 0;
+}
