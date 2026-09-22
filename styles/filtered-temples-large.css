@@ -1,0 +1,31 @@
+@media screen and (min-width: 740px) {
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    width: auto;
+  }
+
+  nav a {
+    padding: 1rem 1.5rem;
+  }
+
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  main h1 {
+    font-size: 2rem;
+  }
+}

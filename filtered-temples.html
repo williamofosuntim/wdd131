@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album | Filtered</title>
+    <meta name="description" content="A responsive, filterable photo album showcasing temples of The Church of Jesus Christ of Latter-day Saints from around the world.">
+    <meta name="author" content="William Ofosu Ntim">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <p class="site-title">Temple Album</p>
+        <button id="menu" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+        <nav>
+            <a href="#" data-filter="home" aria-current="page">Home</a>
+            <a href="#" data-filter="old">Old</a>
+            <a href="#" data-filter="new">New</a>
+            <a href="#" data-filter="large">Large</a>
+            <a href="#" data-filter="small">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Temple Album</h1>
+        <p id="result-count"></p>
+        <div class="container" id="temple-grid">
+            <!-- Temple figures are generated here by scripts/filtered-temples.js -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span>♦️♦️ William Ofosu Ntim ♠️♣️| Accra, Ghana</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
