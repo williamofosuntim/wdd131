@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A product review form for rating home improvement products, including installation date, useful features, and a written review.">
+    <meta name="author" content="William Ofosu Ntim">
     <title>Product Review</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/form.css">
 </head>
 <body>
@@ -16,9 +23,9 @@
             <p>
                 <label for="product">Product Name:</label>
                 <select id="product" name="product" required>
-                    <option value="" disabled selected>Select a Product ...
-
-                    </option>
+                    <option value="" disabled selected>Select a Product ...</option>
+                    <!-- Remaining <option> elements are added dynamically by form.js -->
+                </select>
             </p>
 
             <fieldset>

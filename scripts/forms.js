@@ -1,3 +1,5 @@
+// PLACEHOLDER — replace this array with the actual product array
+// from your assignment doc once you have it. Shape: { id, name }
 const products = [
     { id: 1, name: "Faucet" },
     { id: 2, name: "Water Heater" },
@@ -9,7 +11,7 @@ const selectElement = document.getElementById("product");
 
 products.forEach((product) => {
     const option = document.createElement("option");
-    option.value = product.id;      // value = id, per assignment spec
+    option.value = product.id;         // value = id, per assignment spec
     option.textContent = product.name; // display text = name
     selectElement.appendChild(option);
 });
