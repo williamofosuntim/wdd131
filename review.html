@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Confirmation page showing the submitted product review and the total number of reviews completed.">
+    <meta name="author" content="William Ofosu Ntim">
+    <title>Product Review Submitted</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/review.css">
+</head>
+<body>
+    <header>
+        <h1>Review Submitted</h1>
+    </header>
+
+    <main>
+        <section class="review-summary">
+            <p class="thank-you">Thanks for sharing your experience!</p>
+
+            <dl id="reviewDetails">
+                <dt>Product</dt>
+                <dd id="displayProduct">—</dd>
+
+                <dt>Rating</dt>
+                <dd id="displayRating">—</dd>
+
+                <dt>Date of Installation</dt>
+                <dd id="displayDate">—</dd>
+
+                <dt>Useful Features</dt>
+                <dd id="displayFeatures">—</dd>
+
+                <dt>Review</dt>
+                <dd id="displayReview">—</dd>
+
+                <dt>Submitted By</dt>
+                <dd id="displayName">—</dd>
+            </dl>
+
+            <p class="review-count">
+                This is review number <span id="reviewCount">1</span> submitted from this browser.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 William Ofosu Ntim, Wdd131. All rights reserved.</p>
+        <p>Last Modified: September 26, 2026</p>
+    </footer>
+
+    <script src="scripts/review.js" defer></script>
+</body>
+</html>

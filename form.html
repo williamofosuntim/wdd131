@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/form.css">
-    <script src="scripts/forms.js" defer></script>
 </head>
 <body>
     <header>
@@ -21,8 +20,10 @@
     <main>
         <form action="review.html" method="get">
 
+            <p class="form-note">Fields marked with <span class="required-mark">*</span> are required.</p>
+
             <p>
-                <label for="product">Product Name:</label>
+                <label for="product">Product Name <span class="required-mark">*</span>:</label>
                 <select id="product" name="product" required>
                     <option value="" disabled selected>Select a Product ...</option>
                     <!-- Remaining <option> elements are added dynamically by form.js -->
@@ -30,7 +31,7 @@
             </p>
 
             <fieldset>
-                <legend>Overall Rating</legend>
+                <legend>Overall Rating <span class="required-mark">*</span></legend>
 
                 <input type="radio" id="rating1" name="rating" value="1" required>
                 <label for="rating1">1 &star;</label>
@@ -49,7 +50,7 @@
             </fieldset>
 
             <p>
-                <label for="installDate">Date of Installation:</label>
+                <label for="installDate">Date of Installation <span class="required-mark">*</span>:</label>
                 <input type="date" id="installDate" name="installDate" required>
             </p>
 
@@ -90,5 +91,7 @@
         <p>&copy; 2026 William Ofosu Ntim, Wdd131. All rights reserved.</p>
         <p>Last Modified: September 26, 2026</p>
     </footer>
+
+    <script src="scripts/form.js" defer></script>
 </body>
 </html>
