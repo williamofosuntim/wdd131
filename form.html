@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form action="review.html" method="get">
+
+            <p>
+                <label for="product">Product Name:</label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Select a Product ...
+
+                    </option>
+            </p>
+
+            <fieldset>
+                <legend>Overall Rating</legend>
+
+                <input type="radio" id="rating1" name="rating" value="1" required>
+                <label for="rating1">1 &star;</label>
+
+                <input type="radio" id="rating2" name="rating" value="2" required>
+                <label for="rating2">2 &star;</label>
+
+                <input type="radio" id="rating3" name="rating" value="3" required>
+                <label for="rating3">3 &star;</label>
+
+                <input type="radio" id="rating4" name="rating" value="4" required>
+                <label for="rating4">4 &star;</label>
+
+                <input type="radio" id="rating5" name="rating" value="5" required>
+                <label for="rating5">5 &star;</label>
+            </fieldset>
+
+            <p>
+                <label for="installDate">Date of Installation:</label>
+                <input type="date" id="installDate" name="installDate" required>
+            </p>
+
+            <fieldset>
+                <legend>Useful Features</legend>
+
+                <input type="checkbox" id="feature1" name="easyInstall" value="Easy Installation">
+                <label for="feature1">Easy Installation</label>
+
+                <input type="checkbox" id="feature2" name="durable" value="Durable">
+                <label for="feature2">Durable</label>
+
+                <input type="checkbox" id="feature3" name="energyEfficient" value="Energy Efficient">
+                <label for="feature3">Energy Efficient</label>
+
+                <input type="checkbox" id="feature4" name="goodValue" value="Good Value">
+                <label for="feature4">Good Value</label>
+            </fieldset>
+
+            <p>
+                <label for="review">Review:</label><br>
+                <textarea id="review" name="review" rows="4" cols="50"></textarea>
+            </p>
+
+            <p>
+                <label for="userName">Your Name:</label>
+                <input type="text" id="userName" name="userName">
+            </p>
+
+            <p>
+                <input type="submit" value="Submit Review">
+            </p>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 William Ofosu Ntim, Wdd131. All rights reserved.</p>
+        <p>Last Modified: September 26, 2026</p>
+    </footer>
+
+    <script src="scripts/form.js" defer></script>
+</body>
+</html>
