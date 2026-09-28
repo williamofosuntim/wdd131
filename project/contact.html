@@ -40,6 +40,49 @@
             <h3>Visit Our Campus</h3>
             <p>We would love to have you visit our school! Please schedule a tour by contacting us at the information provided above.</p>
         </section>
+
+        <section>
+            <h3>Send Us an Inquiry</h3>
+            <form id="contactForm" action="contact.html" method="get">
+
+                <p>
+                    <label for="fullName">Full Name <span class="required-mark">*</span>:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </p>
+
+                <p>
+                    <label for="email">Email Address <span class="required-mark">*</span>:</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                </p>
+
+                <p>
+                    <label for="reason">Reason for Inquiry <span class="required-mark">*</span>:</label>
+                    <select id="reason" name="reason" required>
+                        <option value="" disabled selected>Select a reason ...</option>
+                        <option value="admissions">Admissions Information</option>
+                        <option value="tour">Schedule a Campus Tour</option>
+                        <option value="general">General Question</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </p>
+
+                <p>
+                    <input type="submit" value="Send Inquiry">
+                </p>
+
+            </form>
+
+            <div id="formConfirmation" class="hidden" aria-live="polite"></div>
+        </section>
     </main>
 
     <footer>
