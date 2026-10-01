@@ -4,24 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Royal Pearl International School</title>
-        <meta name="description" content="Royal Pearl International School is a private primary and basic education institution in Anaji, Sekondi-Takoradi, Ghana, committed to academic excellence.">
-        <meta name="author" content="William Ofosu Ntim">
+    <meta name="description" content="Photo gallery of Royal Pearl International School in Anaji, Sekondi-Takoradi, showing the school buildings and classrooms.">
+    <meta name="author" content="William Ofosu Ntim">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" href="images/favicon-192.png">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 
     <header>
-        <h1>
-            <img src="images/school-logo.jpeg" alt="Royal Pearl International School logo" class="school-image">
-            Royal Pearl International School
-        </h1>
-        <nav>
+        <div class="brand">
+            <img src="images/school-logo.jpeg" alt="Royal Pearl International School Logo" width="200" height="221" class="school-image">
+            <p class="site-name">Royal Pearl International School</p>
+        </div>
+        <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="academics.html">Academics</a></li>
                 <li><a href="admissions.html">Admissions</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="gallery.html" aria-current="page">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+    </header>
+
+    <main>
+        <h1>Gallery</h1>
+        <p>Take a look around our campus, from our school buildings to our classrooms.</p>
+
+        <div class="gallery">
+            <figure>
+                <img src="images/school-building.jpeg"
+                     alt="A two-story school building with a pale beige exterior, a dark roof, and a wide front facade. The structure sits at night under a clear blue sky, with power lines crossing above and a small outdoor light near the base. The mood is calm and quiet, with a simple school campus atmosphere."
+                     width="400" height="300" loading="lazy">
+                <figcaption>The school building of Royal Pearl International School.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/front-view-school-building.jpg"
+                     alt="Front view of the Royal Pearl International School building"
+                     width="400" height="300" loading="lazy">
+                <figcaption>The front view of the Royal Pearl International School building.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/backview-of-the-building.jpeg"
+                     alt="Back view of the Royal Pearl International School building"
+                     width="400" height="300" loading="lazy">
+                <figcaption>The back view of the Royal Pearl International School building.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/primary-class-room.jpeg"
+                     alt="Primary classroom with student desks arranged for lessons"
+                     width="400" height="300" loading="lazy">
+                <figcaption>The primary classroom of Royal Pearl International School.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/jhs-class-room.jpeg"
+                     alt="Junior high school classroom at Royal Pearl International School"
+                     width="400" height="300" loading="lazy">
+                <figcaption>The junior high school classroom of Royal Pearl International School.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/school-kindergarten.jpeg"
+                     alt="Kindergarten classroom at Royal Pearl International School"
+                     width="400" height="300" loading="lazy">
+                <figcaption>The kindergarten classroom of Royal Pearl International School.</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year">2026</span> Royal Pearl International School</p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

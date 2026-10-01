@@ -4,68 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Royal Pearl International School</title>
-    <meta name="description" content="Royal Pearl International School is a private primary and basic education institution in Anaji, Sekondi-Takoradi, Ghana, committed to academic excellence.">
+    <meta name="description" content="Contact Royal Pearl International School in Anaji, Sekondi-Takoradi, by phone, email or inquiry form.">
     <meta name="author" content="William Ofosu Ntim">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" href="images/favicon-192.png">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 
     <header>
-        <h1>
-            <img src="images/school-logo.jpeg" alt="Royal Pearl International School logo" class="school-image">
-            Royal Pearl International School
-        </h1>
-        <nav>
+        <div class="brand">
+                <img src="images/school-logo.jpeg" alt="Royal Pearl International School logo displaying the school name in a formal educational design" width="200" height="235" class="school-image">
+                <p class="site-name">Royal Pearl International School</p>
+        </div>
+        <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="academics.html">Academics</a></li>
                 <li><a href="admissions.html">Admissions</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h2>Contact Us</h2>
+        <h1>Contact Us</h1>
         <p>If you have any questions or would like to get in touch with us, please feel free to contact us using the information below:</p>
         <ul>
             <li><strong>Address:</strong> Anaji, Sekondi-Takoradi, Ghana</li>
-            <li><strong>Phone:</strong> +233 551 866 458</li>
+            <li><strong>Phone:</strong> <a href="tel:+233551866458">+233 551 866 458</a></li>
             <li><strong>Email:</strong> <a href="mailto:info@royalpearl.edu.gh">info@royalpearl.edu.gh</a></li>
         </ul>
 
         <section>
-            <h3>Visit Our Campus</h3>
-            <p>We would love to have you visit our school! Please schedule a tour by contacting us at the information provided above.</p>
-        </section>
-
-        <section>
-            <h3>Send Us an Inquiry</h3>
+            <h2>Send Us an Inquiry</h2>
+            <p>Fields marked <span class="required-mark"></span> are required.</p>
             <form id="contactForm" action="contact.html" method="get">
 
                 <p>
-                    <label for="fullName">Full Name <span class="required-mark">*</span>:</label>
-                    <input type="text" id="fullName" name="fullName" required>
+                    <label for="fullName">Full Name <span class="required-mark"></span>:</label>
+                    <input type="text" id="fullName" name="fullName" autocomplete="name" required>
                 </p>
 
                 <p>
-                    <label for="email">Email Address <span class="required-mark">*</span>:</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email Address <span class="required-mark"></span>:</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
                 </p>
 
                 <p>
                     <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone">
+                    <input type="tel" id="phone" name="phone" autocomplete="tel">
                 </p>
 
                 <p>
-                    <label for="reason">Reason for Inquiry <span class="required-mark">*</span>:</label>
+                    <label for="reason">Reason for Inquiry <span class="required-mark"></span>:</label>
                     <select id="reason" name="reason" required>
                         <option value="" disabled selected>Select a reason ...</option>
                         <option value="admissions">Admissions Information</option>
-                        <option value="tour">Schedule a Campus Tour</option>
                         <option value="general">General Question</option>
                     </select>
                 </p>
@@ -76,7 +73,7 @@
                 </p>
 
                 <p>
-                    <input type="submit" value="Send Inquiry">
+                    <button type="submit">Send Inquiry</button>
                 </p>
 
             </form>

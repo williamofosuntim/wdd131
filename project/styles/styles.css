@@ -10,7 +10,7 @@
     --brand-blue-dark: #16295e;
     --text-ink: #1a1a1a;
     --bg-light: #f7f9fc;
-    --border-light: #d9dee7;
+    --border-input: #8a94a6;   /* darker so form fields are easy to see */
 }
 
 body {
@@ -20,27 +20,35 @@ body {
     background-color: var(--bg-light);
 }
 
+/* Images never overflow their container */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* ===== Header ===== */
 header {
     background-color: var(--brand-blue);   /* deep royal blue, matches the crest */
     color: #ffffff;
     padding: 1rem 2rem;
-    text-align: left;
 }
 
-header h1 {
+.brand {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     gap: 1rem;
-    font-size: 1.8rem;
     flex-wrap: wrap;
 }
 
+.site-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* White tile behind the logo so it stands out on the blue header */
 .school-image {
     height: 90px;
     width: auto;
-    vertical-align: middle;
     background-color: #ffffff;
     border-radius: 6px;
     padding: 4px;
@@ -71,7 +79,7 @@ nav a:focus {
     color: var(--brand-blue);
 }
 
-nav a.active-link {
+nav a[aria-current="page"] {
     background-color: #ffffff;
     color: var(--brand-blue);
 }
@@ -80,19 +88,37 @@ nav a.active-link {
     display: none;
 }
 
-#read-more-btn {
+/* ===== Buttons ===== */
+#read-more-btn,
+form button[type="submit"] {
     background-color: var(--brand-blue);
     color: #ffffff;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.25rem;
     border-radius: 4px;
     cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
     font-weight: 600;
-    margin-top: 0.5rem;
 }
 
-#read-more-btn:hover {
+#read-more-btn:hover,
+form button[type="submit"]:hover {
     background-color: var(--brand-blue-dark);
+}
+
+form button[type="submit"] {
+    align-self: flex-start;
+}
+
+/* Visible keyboard focus */
+#read-more-btn:focus-visible,
+form button:focus-visible,
+form input:focus-visible,
+form select:focus-visible,
+form textarea:focus-visible {
+    outline: 3px solid var(--brand-blue);
+    outline-offset: 2px;
 }
 
 /* ===== Main Content ===== */
@@ -102,18 +128,27 @@ main {
     padding: 0 1.5rem;
 }
 
-main h2 {
+/* Font sizes are set explicitly so an h1 inside a <section> is not shrunk by the browser */
+main h1 {
     color: var(--brand-blue);
+    font-size: 2rem;
+    line-height: 1.25;
     margin-bottom: 1rem;
 }
 
-main h3 {
+main h2 {
     color: var(--brand-blue);
-    margin-top: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
     margin-bottom: 0.75rem;
 }
 
 main p {
+    margin-bottom: 1rem;
+}
+
+main ul {
+    margin-left: 1.5rem;
     margin-bottom: 1rem;
 }
 
@@ -125,19 +160,35 @@ section {
     margin-bottom: 1.5rem;
 }
 
-section ul {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-section a {
+section a,
+main > ul a {
     color: var(--brand-blue);
     font-weight: 600;
     text-decoration: none;
 }
 
-section a:hover {
+section a:hover,
+main > ul a:hover {
     text-decoration: underline;
+}
+
+/* ===== Gallery ===== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.gallery figcaption {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
 }
 
 /* ===== Contact Form ===== */
@@ -165,28 +216,13 @@ form textarea {
     font-family: inherit;
     font-size: 1rem;
     padding: 0.6rem 0.7rem;
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--border-input);
     border-radius: 4px;
     background-color: var(--bg-light);
 }
 
 form textarea {
     resize: vertical;
-}
-
-form input[type="submit"] {
-    background-color: var(--brand-blue);
-    color: #ffffff;
-    border: none;
-    padding: 0.65rem 1.25rem;
-    border-radius: 4px;
-    font-weight: 600;
-    cursor: pointer;
-    align-self: flex-start;
-}
-
-form input[type="submit"]:hover {
-    background-color: var(--brand-blue-dark);
 }
 
 #formConfirmation {
@@ -206,9 +242,18 @@ footer {
     margin-top: 2rem;
 }
 
+/* ===== Small screens ===== */
 @media (max-width: 600px) {
-    header h1 {
+    header {
+        padding: 1rem;
+    }
+
+    .site-name {
         font-size: 1.4rem;
+    }
+
+    main h1 {
+        font-size: 1.6rem;
     }
 
     nav ul {

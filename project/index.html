@@ -6,18 +6,20 @@
     <title>Home - Royal Pearl International School</title>
     <meta name="description" content="Royal Pearl International School is a private primary and basic education institution in Anaji, Sekondi-Takoradi, Ghana, committed to academic excellence.">
     <meta name="author" content="William Ofosu Ntim">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" href="images/favicon-192.png">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 
     <header>
-        <h1>
-            <img src="images/school-logo.jpeg" alt="Royal Pearl International School logo" class="school-image">
-            Royal Pearl International School
-        </h1>
-        <nav>
+        <div class="brand">
+          <img src="images/school-logo.jpeg" alt="Royal Pearl International School Logo" width="200" height="221" class="school-image">
+            <p class="site-name">Royal Pearl International School</p>
+        </div>
+        <nav aria-label="Main navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="academics.html">Academics</a></li>
                 <li><a href="admissions.html">Admissions</a></li>
@@ -28,14 +30,16 @@
     </header>
 
     <main>
-        <h2>Welcome to Royal Pearl International School</h2>
-        <p>Royal Pearl International School is a private educational institution located at 66 Davis Street, Anaji in the Sekondi-Takoradi Metropolis of the Western Region, Ghana. The school serves the local community by providing comprehensive primary and basic education. Guided by our motto, "Seeking the Ultimate," we are committed to excellence in everything we do from the classroom to extracurricular activities. Our dedicated staff work closely with families to create a supportive environment where every child can thrive.
-            <span id="extra-text" class="hidden"> Since 1998, the school has grown steadily while staying true to its founding motto, "Seeking the Ultimate," building a reputation for academic excellence and strong community values.</span>
-        </p>
-        <button id="read-more-btn" type="button">Read More</button>
+        <section>
+            <h1>Welcome to Royal Pearl International School</h1>
+            <p>Royal Pearl International School is a private educational institution located at 66 Davis Street, Anaji in the Sekondi-Takoradi Metropolis of the Western Region, Ghana. The school serves the local community by providing comprehensive primary and basic education. Guided by our motto, "Seeking the Ultimate," we are committed to excellence in everything we do, from the classroom to extracurricular activities. Our dedicated staff work closely with families to create a supportive environment where every child can thrive.
+                <span id="extra-text" class="hidden">Since 1998, the school has grown steadily, building a reputation for academic excellence and strong community values.</span>
+            </p>
+            <button id="read-more-btn" type="button" aria-expanded="false" aria-controls="extra-text">Read More</button>
+        </section>
 
         <section>
-            <h3>Why Choose Us</h3>
+            <h2>Why Choose Us</h2>
             <ul>
                 <li>Small class sizes for personalized attention</li>
                 <li>Experienced, qualified teaching staff</li>
