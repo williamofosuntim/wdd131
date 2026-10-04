@@ -14,8 +14,8 @@
 
     <header>
         <div class="brand">
-                <img src="images/school-logo.jpeg" alt="Royal Pearl International School logo displaying the school name in a formal educational design" width="200" height="235" class="school-image">
-                <p class="site-name">Royal Pearl International School</p>
+            <img src="images/school-logo.jpeg" alt="Royal Pearl International School Logo" width="200" height="221" class="school-image">
+            <p class="site-name">Royal Pearl International School</p>
         </div>
         <nav aria-label="Main navigation">
             <ul>
@@ -30,36 +30,38 @@
     </header>
 
     <main>
-        <h1>Contact Us</h1>
-        <p>If you have any questions or would like to get in touch with us, please feel free to contact us using the information below:</p>
-        <ul>
-            <li><strong>Address:</strong> Anaji, Sekondi-Takoradi, Ghana</li>
-            <li><strong>Phone:</strong> <a href="tel:+233551866458">+233 551 866 458</a></li>
-            <li><strong>Email:</strong> <a href="mailto:info@royalpearl.edu.gh">info@royalpearl.edu.gh</a></li>
-        </ul>
+        <section>
+            <h1>Contact Us</h1>
+            <p>If you have any questions or would like to get in touch with us, please feel free to contact us using the information below:</p>
+            <ul>
+                <li><strong>Address:</strong> 66 Davis Street, Anaji, Sekondi-Takoradi, Ghana</li>
+                <li><strong>Phone:</strong> <a href="tel:+233551866458">+233 551 866 458</a></li>
+                <li><strong>Email:</strong> <a href="mailto:info@royalpearl.edu.gh">info@royalpearl.edu.gh</a></li>
+            </ul>
+        </section>
 
         <section>
             <h2>Send Us an Inquiry</h2>
-            <p>Fields marked <span class="required-mark"></span> are required.</p>
+            <p>Fields marked <span class="required-mark" aria-hidden="true">*</span> are required.</p>
             <form id="contactForm" action="contact.html" method="get">
 
                 <p>
-                    <label for="fullName">Full Name <span class="required-mark"></span>:</label>
+                    <label for="fullName">Full Name <span class="required-mark" aria-hidden="true">*</span></label>
                     <input type="text" id="fullName" name="fullName" autocomplete="name" required>
                 </p>
 
                 <p>
-                    <label for="email">Email Address <span class="required-mark"></span>:</label>
+                    <label for="email">Email Address <span class="required-mark" aria-hidden="true">*</span></label>
                     <input type="email" id="email" name="email" autocomplete="email" required>
                 </p>
 
                 <p>
-                    <label for="phone">Phone Number:</label>
+                    <label for="phone">Phone Number</label>
                     <input type="tel" id="phone" name="phone" autocomplete="tel">
                 </p>
 
                 <p>
-                    <label for="reason">Reason for Inquiry <span class="required-mark"></span>:</label>
+                    <label for="reason">Reason for Inquiry <span class="required-mark" aria-hidden="true">*</span></label>
                     <select id="reason" name="reason" required>
                         <option value="" disabled selected>Select a reason ...</option>
                         <option value="admissions">Admissions Information</option>
@@ -68,7 +70,7 @@
                 </p>
 
                 <p>
-                    <label for="message">Message:</label>
+                    <label for="message">Message</label>
                     <textarea id="message" name="message" rows="4"></textarea>
                 </p>
 
