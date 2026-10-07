@@ -1,14 +1,11 @@
-// Same product data used on form.html, needed here to turn the submitted
-// product id back into a readable product name.
 const products = [
-    { id: 1, name: "Faucet" },
-    { id: 2, name: "Water Heater" },
-    { id: 3, name: "Dishwasher" },
-    { id: 4, name: "Garbage Disposal" }
+    { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
+    { id: "fc-2050", name: "power laces", averagerating: 4.7 },
+    { id: "fs-1987", name: "time circuits", averagerating: 3.5 },
+    { id: "ac-2000", name: "low voltage reactor", averagerating: 3.9 },
+    { id: "jj-1969", name: "warp equalizer", averagerating: 5.0 }
 ];
 
-// Readable labels for the checkbox fields, keyed by their `name` attribute
-// from form.html.
 const featureLabels = {
     easyInstall: "Easy Installation",
     durable: "Durable",
@@ -16,58 +13,58 @@ const featureLabels = {
     goodValue: "Good Value"
 };
 
+const params = new URLSearchParams(window.location.search);
+
 function getProductName(id) {
     const match = products.find((product) => String(product.id) === id);
     return match ? match.name : "Not specified";
 }
 
 function displaySubmittedData() {
-    const params = new URLSearchParams(window.location.search);
-
-    // Product
     const productId = params.get("product");
     document.getElementById("displayProduct").textContent = productId
         ? getProductName(productId)
         : "Not specified";
 
-    // Rating
     const rating = params.get("rating");
     document.getElementById("displayRating").textContent = rating
         ? `${rating} out of 5 stars`
         : "Not specified";
 
-    // Date of installation
-    const installDate = params.get("installDate");
-    document.getElementById("displayDate").textContent = installDate || "Not specified";
+    document.getElementById("displayDate").textContent =
+        params.get("installDate") || "Not specified";
 
-    // Useful features — each checked box shows up as its own name=value pair.
-    // Unchecked boxes simply don't appear in the query string at all.
-    const checkedFeatures = Object.keys(featureLabels).filter((key) => params.has(key));
-    document.getElementById("displayFeatures").textContent = checkedFeatures.length
-        ? checkedFeatures.map((key) => featureLabels[key]).join(", ")
+    const checked = Object.keys(featureLabels).filter((key) => params.has(key));
+    document.getElementById("displayFeatures").textContent = checked.length
+        ? checked.map((key) => featureLabels[key]).join(", ")
         : "None selected";
 
-    // Written review (optional)
     const review = params.get("review");
-    document.getElementById("displayReview").textContent = review && review.trim()
-        ? review
-        : "No written review provided";
+    document.getElementById("displayReview").textContent =
+        review && review.trim() ? review : "No written review provided";
 
-    // User name (optional)
     const userName = params.get("userName");
-    document.getElementById("displayName").textContent = userName && userName.trim()
-        ? userName
-        : "Anonymous";
+    document.getElementById("displayName").textContent =
+        userName && userName.trim() ? userName : "Anonymous";
 }
 
 function updateReviewCount() {
-    let count = localStorage.getItem("reviewCount");
-    count = count ? parseInt(count, 10) + 1 : 1;
-    localStorage.setItem("reviewCount", count);
+    let count = 0;
+    try {
+        count = parseInt(localStorage.getItem("reviewCount"), 10) || 0;
+
+        // Count only real submissions, and not a refresh of the same one
+        const query = window.location.search;
+        if (params.has("product") && sessionStorage.getItem("lastCounted") !== query) {
+            count += 1;
+            localStorage.setItem("reviewCount", count);
+            sessionStorage.setItem("lastCounted", query);
+        }
+    } catch (error) {
+        console.warn("Storage unavailable:", error);
+    }
     document.getElementById("reviewCount").textContent = count;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    displaySubmittedData();
-    updateReviewCount();
-});
+displaySubmittedData();
+updateReviewCount();
