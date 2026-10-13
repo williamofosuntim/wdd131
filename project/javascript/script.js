@@ -1,9 +1,9 @@
 
 // 12. JavaScript Objects - School programs object
 const schoolPrograms = [
-    { id: 1, name: "Nursery", category: "early", fee: 1500, featured: true },
-    { id: 2, name: "Primary", category: "basic", fee: 2000, featured: true },
-    { id: 3, name: "Junior High", category: "basic", fee: 2500, featured: false }
+    { id: 1, name: "Nursery", category: "early", fee: 800, featured: true },
+    { id: 2, name: "Primary", category: "basic", fee: 1100, featured: true },
+    { id: 3, name: "Junior High", category: "basic", fee: 1450, featured: false }
 ];
 
 // 13. Objects mapping for inquiry - Requirement for Objects
